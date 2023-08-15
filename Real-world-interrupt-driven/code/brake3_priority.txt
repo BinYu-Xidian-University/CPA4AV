@@ -1,0 +1,3 @@
+task_RR_Wheel_isr/1/1
+task_FL_Wheel_isr/2/2
+task_FR_Wheel_isr/3/3

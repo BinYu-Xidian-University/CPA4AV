@@ -1,0 +1,3 @@
+Timer_A_isr/1/1
+Timer_C_isr/3/3
+Timer_Force_isr/2/2

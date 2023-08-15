@@ -1,0 +1,2 @@
+closer1_isr/1/1
+closer2_isr/2/2

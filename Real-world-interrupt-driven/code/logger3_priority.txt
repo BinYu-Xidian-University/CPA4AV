@@ -1,0 +1,3 @@
+task_communicate_isr/3/3
+task_measure2_isr/1/1
+task_measure3_isr/2/2

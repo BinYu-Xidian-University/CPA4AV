@@ -1,0 +1,3 @@
+closer1_isr/1/1
+closer2_isr/2/2
+writer3_isr/3/3
