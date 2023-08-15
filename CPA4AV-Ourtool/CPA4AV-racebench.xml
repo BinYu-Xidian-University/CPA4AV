@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.9//EN" "https://www.sosy-lab.org/benchexec/benchmark-2.3.dtd">
+<benchmark tool="cpachecker" timelimit="5 min" memlimit="4 GB" cpuCores="1" threads="2">
+
+  <option name="-heap">4096M</option>
+  <option name="-benchmark"/>
+  <option name="-timelimit">300s</option>
+
+<rundefinition name="with-interruption-points">
+  <option name="-config">config/myAnalysis-interrupt-benchmark-racebench-with-interruption-points.properties</option>
+  <tasks name="racebench">
+	  <includesfile>../Racebench-2.1/Tasks.set</includesfile>
+	  <propertyfile>../Racebench-2.1/unreach-call.prp</propertyfile>
+  </tasks>
+</rundefinition>
+
+<rundefinition name="without-interruption-points">
+  <option name="-config">config/myAnalysis-interrupt-benchmark-racebench-without-interruption-points.properties</option>
+  <tasks name="racebench">
+	  <includesfile>../Racebench-2.1/Tasks.set</includesfile>
+	  <propertyfile>../Racebench-2.1/unreach-call.prp</propertyfile>
+  </tasks>
+</rundefinition>
+
+</benchmark>
