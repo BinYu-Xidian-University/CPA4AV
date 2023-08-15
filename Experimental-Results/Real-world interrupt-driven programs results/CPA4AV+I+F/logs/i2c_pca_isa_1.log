@@ -1,0 +1,53 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+refinement: 1
+========================== Verify Result ===========================
+explored states: 19859
+reached set size: 19860
+total time: 6726 ms
+Race times:
+ 
+=========================== Conflicts checked =============================
+The total number of conflicts is 6
+RWR conflicts have 0
+WRW conflicts have 0
+RWW conflicts have 0
+WWR conflicts have 6
+=========================== Detail =============================
+ raceRWRSet:
+[]
+ raceWRWSet:
+[]
+ raceRWWSet:
+[]
+ raceWWRSet:
+[
+irq:(irq,req3_isr, '786, 'W, req3_isr, 1)
+                               (irq,req4_isr, '796, 'W, req4_isr, 1)
+                               (irq,req3_isr, '788, 'R, req3_isr, 1)
+}, 
+irq:(irq,req1, '766, 'W, svp_simple_007_001_main, 1)
+                               (irq,req2_isr, '776, 'W, req2_isr, 1)
+                               (irq,req1, '768, 'R, svp_simple_007_001_main, 1)
+}, 
+irq:(irq,req2_isr, '776, 'W, req2_isr, 1)
+                               (irq,req4_isr, '796, 'W, req4_isr, 1)
+                               (irq,req2_isr, '778, 'R, req2_isr, 1)
+}, 
+irq:(irq,req1, '766, 'W, svp_simple_007_001_main, 1)
+                               (irq,req4_isr, '796, 'W, req4_isr, 1)
+                               (irq,req1, '768, 'R, svp_simple_007_001_main, 1)
+}, 
+irq:(irq,req1, '766, 'W, svp_simple_007_001_main, 1)
+                               (irq,req3_isr, '786, 'W, req3_isr, 1)
+                               (irq,req1, '768, 'R, svp_simple_007_001_main, 1)
+}, 
+irq:(irq,req2_isr, '776, 'W, req2_isr, 1)
+                               (irq,req3_isr, '786, 'W, req3_isr, 1)
+                               (irq,req2_isr, '778, 'R, req2_isr, 1)
+}]
+=========================== Predicates =============================
+====================================================================
+time for TransferRelation:    0.218s
+Verification result: TRUE. No property violation found by chosen configuration.
+More details about the verification run can be found in the directory "./output".

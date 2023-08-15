@@ -1,0 +1,65 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+refinement: 1
+========================== Verify Result ===========================
+explored states: 28331
+reached set size: 28332
+total time: 6215 ms
+Race times:
+ 
+=========================== Conflicts checked =============================
+The total number of conflicts is 9
+RWR conflicts have 0
+WRW conflicts have 0
+RWW conflicts have 0
+WWR conflicts have 9
+=========================== Detail =============================
+ raceRWRSet:
+[]
+ raceWRWSet:
+[]
+ raceRWWSet:
+[]
+ raceWWRSet:
+[
+count:(count,writer2_isr, '1796, 'W, writer2_isr, 1)
+                               (count,writer3_isr, '1821, 'W, writer3_isr, 1)
+                               (count,writer2_isr, '1799, 'R, writer2_isr, 1)
+}, 
+count:(count,writer1, '1771, 'W, svp_simple_023_001_main, 1)
+                               (count,writer3_isr, '1821, 'W, writer3_isr, 1)
+                               (count,writer1, '1774, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,closer4, '1737, 'W, svp_simple_023_001_main, 1)
+                               (count,writer2_isr, '1796, 'W, writer2_isr, 1)
+                               (count,closer4, '1739, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,closer4, '1737, 'W, svp_simple_023_001_main, 1)
+                               (count,writer3_isr, '1821, 'W, writer3_isr, 1)
+                               (count,closer4, '1739, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,writer2_isr, '1796, 'W, writer2_isr, 1)
+                               (count,writer4_isr, '1846, 'W, writer4_isr, 1)
+                               (count,writer2_isr, '1799, 'R, writer2_isr, 1)
+}, 
+count:(count,writer1, '1771, 'W, svp_simple_023_001_main, 1)
+                               (count,writer4_isr, '1846, 'W, writer4_isr, 1)
+                               (count,writer1, '1774, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,closer4, '1737, 'W, svp_simple_023_001_main, 1)
+                               (count,writer4_isr, '1846, 'W, writer4_isr, 1)
+                               (count,closer4, '1739, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,writer1, '1771, 'W, svp_simple_023_001_main, 1)
+                               (count,writer2_isr, '1796, 'W, writer2_isr, 1)
+                               (count,writer1, '1774, 'R, svp_simple_023_001_main, 1)
+}, 
+count:(count,writer3_isr, '1821, 'W, writer3_isr, 1)
+                               (count,writer4_isr, '1846, 'W, writer4_isr, 1)
+                               (count,writer3_isr, '1824, 'R, writer3_isr, 1)
+}]
+=========================== Predicates =============================
+====================================================================
+time for TransferRelation:   0.200s
+Verification result: TRUE. No property violation found by chosen configuration.
+More details about the verification run can be found in the directory "./output".

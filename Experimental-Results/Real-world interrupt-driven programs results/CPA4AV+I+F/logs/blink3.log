@@ -1,0 +1,77 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+refinement: 1
+========================== Verify Result ===========================
+explored states: 38077
+reached set size: 38078
+total time: 14400 ms
+Race times:
+ 
+=========================== Conflicts checked =============================
+The total number of conflicts is 12
+RWR conflicts have 7
+WRW conflicts have 0
+RWW conflicts have 0
+WWR conflicts have 5
+=========================== Detail =============================
+ raceRWRSet:
+[
+timerCount:(timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_Reset, '850, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_A_isr, '786, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_A_isr, '786, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_B_isr, '797, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_A_isr, '786, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_B_isr, '797, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_B_isr, '801, 'R, Timer_B_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_B_isr, '804, 'R, Timer_B_isr, 1)
+}, 
+timerCount:(timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_Reset, '850, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_Force, '840, 'R, Timer_A_isr, 1)
+}]
+ raceWRWSet:
+[]
+ raceRWWSet:
+[]
+ raceWWRSet:
+[
+timerCount:(timerCount,Timer_B_isr, '797, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_B_isr, '801, 'R, Timer_B_isr, 1)
+}, 
+timerCount:(timerCount,Timer_A_isr, '783, 'W, Timer_A_isr, 1)
+                               (timerCount,Timer_B_isr, '797, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_Reset, '850, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_Reset, '854, 'R, Timer_B_isr, 1)
+}, 
+timerCount:(timerCount,Timer_A_isr, '783, 'W, Timer_A_isr, 1)
+                               (timerCount,Timer_Reset, '850, 'W, Timer_B_isr, 1)
+                               (timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+}, 
+timerCount:(timerCount,Timer_A_isr, '783, 'W, Timer_A_isr, 1)
+                               (timerCount,Timer_C_isr, '820, 'W, Timer_C_isr, 1)
+                               (timerCount,Timer_A_isr, '784, 'R, Timer_A_isr, 1)
+}]
+=========================== Predicates =============================
+====================================================================
+time for TransferRelation:    0.283s
+Verification result: TRUE. No property violation found by chosen configuration.
+More details about the verification run can be found in the directory "./output".

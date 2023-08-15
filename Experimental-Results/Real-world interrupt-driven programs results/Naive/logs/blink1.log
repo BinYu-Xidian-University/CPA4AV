@@ -1,0 +1,5 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+time for TransferRelation:    1.679s
+Verification result: UNKNOWN, incomplete analysis.
+More details about the verification run can be found in the directory "./output".

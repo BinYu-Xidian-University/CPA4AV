@@ -1,0 +1,33 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+refinement: 1
+========================== Verify Result ===========================
+explored states: 8841
+reached set size: 8842
+total time: 4889 ms
+Race times:
+ 
+=========================== Conflicts checked =============================
+The total number of conflicts is 1
+RWR conflicts have 0
+WRW conflicts have 0
+RWW conflicts have 0
+WWR conflicts have 1
+=========================== Detail =============================
+ raceRWRSet:
+[]
+ raceWRWSet:
+[]
+ raceRWWSet:
+[]
+ raceWWRSet:
+[
+tco_write_buf:(tco_write_buf,closer1_isr, '1698, 'W, closer1_isr, 1)
+                               (tco_write_buf,closer2_isr, '1663, 'W, closer2_isr, 1)
+                               (tco_write_buf,closer1_isr, '1699, 'R, closer1_isr, 1)
+}]
+=========================== Predicates =============================
+====================================================================
+time for TransferRelation:   0.101s
+Verification result: TRUE. No property violation found by chosen configuration.
+More details about the verification run can be found in the directory "./output".

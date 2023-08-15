@@ -1,0 +1,53 @@
+Running CPAchecker with Java heap of size 32768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with -stack if needed.
+refinement: 1
+========================== Verify Result ===========================
+explored states: 22205
+reached set size: 22206
+total time: 9019 ms
+Race times:
+ 
+=========================== Conflicts checked =============================
+The total number of conflicts is 6
+RWR conflicts have 5
+WRW conflicts have 0
+RWW conflicts have 0
+WWR conflicts have 1
+=========================== Detail =============================
+ raceRWRSet:
+[
+intervalCounter:(intervalCounter,task_measure1, '2381, 'R, svp_simple_015_001_main, 1)
+                               (intervalCounter,task_communicate_isr, '2465, 'W, task_communicate_isr, 1)
+                               (intervalCounter,task_measure1, '2381, 'R, svp_simple_015_001_main, 1)
+}, 
+numberOfRecords:(numberOfRecords,task_measure1, '2384, 'R, svp_simple_015_001_main, 1)
+                               (numberOfRecords,task_communicate_isr, '2467, 'W, task_communicate_isr, 1)
+                               (numberOfRecords,task_measure1, '2384, 'R, svp_simple_015_001_main, 1)
+}, 
+tickCounter:(tickCounter,task_measure1, '2372, 'R, svp_simple_015_001_main, 1)
+                               (tickCounter,task_communicate_isr, '2466, 'W, task_communicate_isr, 1)
+                               (tickCounter,task_measure1, '2378, 'R, svp_simple_015_001_main, 1)
+}, 
+tickCounter:(tickCounter,task_measure1, '2372, 'R, svp_simple_015_001_main, 1)
+                               (tickCounter,task_measure2_isr, '2392, 'W, task_measure2_isr, 1)
+                               (tickCounter,task_measure1, '2378, 'R, svp_simple_015_001_main, 1)
+}, 
+tickCounter:(tickCounter,task_measure1, '2372, 'R, svp_simple_015_001_main, 1)
+                               (tickCounter,task_measure3_isr, '2407, 'W, task_measure3_isr, 1)
+                               (tickCounter,task_measure1, '2378, 'R, svp_simple_015_001_main, 1)
+}]
+ raceWRWSet:
+[]
+ raceRWWSet:
+[]
+ raceWWRSet:
+[
+tickCounter:(tickCounter,task_measure3_isr, '2407, 'W, task_measure3_isr, 1)
+                               (tickCounter,task_communicate_isr, '2466, 'W, task_communicate_isr, 1)
+                               (tickCounter,task_measure3_isr, '2410, 'R, task_measure3_isr, 1)
+}]
+=========================== Predicates =============================
+====================================================================
+time for TransferRelation:    0.246s
+Verification result: TRUE. No property violation found by chosen configuration.
+More details about the verification run can be found in the directory "./output".
